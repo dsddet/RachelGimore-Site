@@ -1,0 +1,80 @@
+@import "../../../../assets/variables";
+
+@mixin nav-cmp($height) {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: $height;
+  width: 100%;
+  font-size: $ng-nav-font;
+  background-color: $ng-secondary-color;
+  text-align: center;
+  font-family: $ng-font-family;
+  font-style: normal;
+  //background-image: linear-gradient($ng-secondary-color, #0b4353);
+
+  //  background-image: url("/assets/nav-logo.svg");
+  //  background-repeat: no-repeat;
+  //  background-size: 35px 35px;
+  //  background-position-x: 10%;
+  //  background-position-y: center;
+  //  background-blend-mode: inherit;
+}
+
+@mixin  nav-link($display) {
+  a {
+    padding-left: 25px;
+    padding-right:25px;
+    padding-top: 25px;
+    display: $display;
+    margin: 0px;
+    text-decoration: none;
+    color: $ng-nav-font-normal;
+  }
+  a:hover {
+    color: $ng-nav-font-hover;
+  }
+}
+
+@mixin nav-links-icon{
+  div {
+    height: 30px;
+    width: 30px;
+    float: left;
+    padding-left: 10px;
+    padding-top:5px;
+    text-align: center;
+    color:$ng-nav-font-hover;
+  }
+
+}
+
+@mixin nav-links-icon-hide{
+  div{
+    display: none;
+  }
+}
+
+@mixin nav-link-hide{
+  a{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav-cmp {
+    @include nav-cmp(70px);
+    @include nav-link(inline-block);
+    @include nav-links-icon-hide();
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-cmp {
+    @include nav-cmp(48px);
+    @include nav-links-icon();
+    @include nav-link-hide();
+  }
+
+
+}
