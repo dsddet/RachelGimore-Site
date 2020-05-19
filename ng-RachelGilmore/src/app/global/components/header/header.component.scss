@@ -1,5 +1,5 @@
 @import "../../../../assets/variables";
-
+//Navigation bar container
 @mixin nav-cmp($height) {
   position: fixed;
   left: 0px;
@@ -11,70 +11,95 @@
   text-align: center;
   font-family: $ng-font-family;
   font-style: normal;
-  //background-image: linear-gradient($ng-secondary-color, #0b4353);
 
-  //  background-image: url("/assets/nav-logo.svg");
+  //  background-image: url("/assets/Brightest.png");
   //  background-repeat: no-repeat;
-  //  background-size: 35px 35px;
+  //  background-size: 45px 45px;
   //  background-position-x: 10%;
   //  background-position-y: center;
-  //  background-blend-mode: inherit;
+  //  background-blend-mode: normal;
 }
-
-@mixin  nav-link($display) {
+//links on navigation bar
+@mixin  nav-link() {
   a {
-    padding-left: 25px;
-    padding-right:25px;
+    padding-left: 1.5%;
+    padding-right:1.5%;
     padding-top: 25px;
-    display: $display;
     margin: 0px;
     text-decoration: none;
     color: $ng-nav-font-normal;
+    -webkit-tap-highlight-color:transparent;
   }
   a:hover {
     color: $ng-nav-font-hover;
   }
 }
+// navigation drop down for small screens
+@mixin nav-dropdown {
+  width: 100%;
+  height: 100%;
+  background-color: $ng-secondary-color;
+  position: fixed;
+  left: 0px;
+  top: 48px;
+  text-align: center;
+  font-family: $ng-font-family;
+}
 
-@mixin nav-links-icon{
-  div {
+//links on small displays container
+@mixin nav-links-icon($display){
     height: 30px;
     width: 30px;
     float: left;
     padding-left: 10px;
-    padding-top:5px;
+    padding-top:1.5%;
     text-align: center;
     color:$ng-nav-font-hover;
-  }
-
+    display: $display;
 }
 
-@mixin nav-links-icon-hide{
-  div{
-    display: none;
-  }
+
+//hide big display links
+@mixin nav-hide($display){
+    display: $display;
 }
 
-@mixin nav-link-hide{
-  a{
-    display: none;
-  }
-}
-
+//from 767 to bigger screens
 @media screen and (min-width: 767px) {
   .nav-cmp {
-    @include nav-cmp(70px);
-    @include nav-link(inline-block);
-    @include nav-links-icon-hide();
+    @include nav-cmp(60px);
+    @include nav-link();
+  }
+  .nav-links-icon{
+    @include nav-links-icon(none);
+  }
+
+  .nav-hide{
+    @include nav-hide(inline-block);
   }
 }
 
+//for small screens to 767
 @media screen and (max-width: 767px) {
   .nav-cmp {
     @include nav-cmp(48px);
-    @include nav-links-icon();
-    @include nav-link-hide();
   }
 
+  .nav-hide{
+    @include nav-hide(none);
+  }
 
+  .nav-links-icon{
+    @include nav-links-icon(block);
+  }
+
+  .nav-dropdown{
+    @include nav-dropdown();
+    @include nav-link();
+    a{
+      display: block;
+    }
+  }
 }
+
+

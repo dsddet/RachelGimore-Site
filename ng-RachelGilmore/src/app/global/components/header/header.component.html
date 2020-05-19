@@ -1,14 +1,15 @@
 <nav class="nav-cmp">
-  <div>
+  <div class="nav-links-icon" (click)="toggleNavigation()">
     <hr />
     <hr />
     <hr />
   </div>
+  <div *ngIf="showElement" class="nav-dropdown">
+    <a href="#" *ngFor="let link of links"> {{ link }}</a>
+  </div>
 
-  <a href="#">Home</a>
-  <a href="#">Coaching</a>
-  <a href="#">Empowering Entreprenuers</a>
-  <a href="#">Earth and Soul Adventures</a>
-  <a href="#">Postcasts</a>
+  <div *ngIf="!showElement" class="nav-link">
+  <a class="nav-hide" href="#" *ngFor="let link of links"> {{ link }}</a>
+  </div>
 
 </nav>
