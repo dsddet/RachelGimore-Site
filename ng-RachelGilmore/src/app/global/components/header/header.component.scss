@@ -1,3 +1,4 @@
+@use 'sass:map';
 @import "../../../../assets/variables";
 //Navigation bar container
 @mixin nav-cmp($height) {
@@ -11,6 +12,8 @@
   text-align: center;
   font-family: $ng-font-family;
   font-style: normal;
+  font-size: 14px;
+  z-index: map-get($map: $z-index, $key: "low");
 
   //  background-image: url("/assets/Brightest.png");
   //  background-repeat: no-repeat;
@@ -44,6 +47,7 @@
   top: 48px;
   text-align: center;
   font-family: $ng-font-family;
+  z-index: map-get($map: $z-index, $key: "top");
 }
 
 //links on small displays container
