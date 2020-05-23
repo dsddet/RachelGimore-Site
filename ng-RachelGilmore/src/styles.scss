@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "./assets/variables";
 html,body{
   margin: 0px;
   display: block;
+  background-color: #f5f5f7;
+  font-family: $ng-font-family;
+  font-size: 12px;
+  color: $ng-nav-font-normal;
 }

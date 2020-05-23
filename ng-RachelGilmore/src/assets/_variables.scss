@@ -1,7 +1,44 @@
 $ng-primary-color: #0e84a7;
-$ng-secondary-color: #08586f;
+$ng-secondary-color: #085B83;
+$ng-secondary-accent-color: #22485021;
 $ng-nav-font: 14px;
+$ng-footer-font-color:rgba(77, 78, 80, 0.658);
 $ng-font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
   "Arial", "sans-serif";
-$ng-nav-font-hover: #EFD477;
-$ng-nav-font-normal: #f5f5f7;
+$ng-nav-font-hover: #fba707;
+$ng-nav-font-normal: #f5f5f7d5;
+$z-index:("low":1000,"mid":2000,"up":3000,"top":4000);
+
+
+@mixin container-big{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+@mixin sizeable-div($width,$display){
+  width: $width;
+  display: $display;
+}
+
+@mixin  footer-headings {
+  font-size: 14px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+@mixin footer-button{
+  padding: 8px 16px;
+  user-select: none;
+  border:none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin: 5px 0px 5px 0px;
+  background-color:wheat;
+  font-size: 13px;
+
+}

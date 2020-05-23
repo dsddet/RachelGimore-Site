@@ -1,0 +1,75 @@
+@use "sass:map";
+@import "../../../../assets/variables";
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
+  z-index: map-get($map: $z-index, $key: "low");
+
+}
+.links-div{
+  @include sizeable-div(100%,block);
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+.content-div{
+  @include sizeable-div(auto,inline);
+  margin: 1.5% 10% 0px 10%;
+  text-align: center;
+  .footer-headings{
+    @include footer-headings();
+  }
+}
+
+
+.first-in-ft{
+  width: 100%;
+  background-color: $ng-secondary-accent-color;
+  display: inline-block;
+   @include container-big();
+  span{
+    padding-right:10px;
+    padding-left:10px;
+    font-family: $ng-font-family;
+    font-size: 12px;
+    color: $ng-footer-font-color;
+    line-height: 18px;
+    }
+
+  button,input{
+    @include footer-button();
+    color:rgb(124, 18, 18);
+    border-radius: 5px;
+  }
+
+  input{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: $ng-nav-font-normal !important;
+    color:  rgb(124, 18, 18);
+    width: 200px;
+    font-size: 13px;
+    border: 1px solid $ng-secondary-color;
+  }
+
+  input:focus,button:focus{
+    outline:none;
+  }
+}
+
+.second-in-ft{
+  height: 40px;
+  width: 100%;
+  background-color: #085B83;
+  display: inline-block;
+  text-align: left;
+}
+
+.copyright{
+  margin:11px 0px 0px 10px;
+  opacity:0.5;
+}
+
