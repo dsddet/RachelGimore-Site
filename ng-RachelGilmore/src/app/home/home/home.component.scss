@@ -1,0 +1,120 @@
+@use 'sass:map';
+@import "../../../assets/variables";
+@mixin section($bg-color, $height) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $bg-color;
+  height: $height;
+  width: auto;
+}
+
+@mixin section-title($color) {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $color;
+}
+
+.sect-1 {
+  @include section(white, 350px);
+   margin-top: 70px;
+
+  h1 {
+    display: inline;
+    @include section-title(#e64a5e);
+  }
+  img {
+    margin-top: 20px;
+    width: 360px;
+    height: 360px;
+  }
+}
+
+.sect-2 {
+  @include section(#C9EFD7, 360px);
+  h1 {
+    display: inline;
+    @include section-title(#167594);
+  }
+  img {
+    margin-top: 20px;
+    width: 360px;
+    height: 360px;
+  }
+}
+
+.sect-3 {
+  @include section(#F9FFF7, 400px);
+  h1 {
+    display: inline;
+    @include section-title(#556CA4);
+  }
+  img {
+    margin-top: 20px;
+    width: auto;
+    height: 200px;
+    margin-left: 120px;
+  }
+}
+
+@mixin section-txt-container(){
+  display: inline-block;
+  margin: 70px 75px 10px 150px;
+  text-align: center;
+}
+
+.section-txt-container-cst3{
+  @include section-txt-container();
+  margin-top:40px;
+}
+
+.section-txt-container {
+  @include section-txt-container();
+}
+
+.section-msg {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1483A7;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.abt-float {
+  width: 130px;
+  //height: 380px;
+  background-color: #2e3739;
+  position: fixed;
+  top:10px;
+  left: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: map-get($map: $z-index, $key: "mid");
+
+  img{
+    width: 120px;
+    height: 120px;
+    margin:auto;
+    margin-bottom: 5px;
+    margin-top:2px;
+    display: block;
+  }
+
+  .about-msg {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #aeb3ab;
+    //width: 400px;
+    margin: auto;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+    line-height: 17px;
+    display: block;
+  }
+}
