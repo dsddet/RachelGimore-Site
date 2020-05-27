@@ -1,0 +1,28 @@
+@use 'sass:map';
+@import "../../../../assets/variables";
+
+.media-links-container{
+  width:auto;
+  height: auto;
+  position: fixed;
+  top: 150px;
+  right:10px;
+  z-index: map-get($map: $z-index, $key: "low");
+
+  img{
+    display:block;
+    width:26px;
+    height: 26px;
+    padding:5px;
+
+    &:hover{
+      width:24px;
+      height: 24px;
+    }
+  }
+
+
+}
+
+
+
