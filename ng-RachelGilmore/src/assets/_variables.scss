@@ -8,6 +8,21 @@ $ng-nav-font-hover: #fba707;
 $ng-nav-font-normal: #e8e8e8;
 $z-index:("low":1000,"mid":2000,"up":3000,"top":4000);
 
+@mixin dynamic-underline($color){
+  text-decoration: none;
+  background-image: linear-gradient($color, $color);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+
+
+  &:hover,&:focus{
+    background-size: 100% 2px;
+  }
+
+}
+
 
 @mixin container-big{
   display: flex;
