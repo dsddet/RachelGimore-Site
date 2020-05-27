@@ -14,6 +14,18 @@
   font-style: normal;
   font-size: 14px;
   z-index: map-get($map: $z-index, $key: "low");
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  img{
+    width:78px;
+    height:78px;
+    top: 0px;
+    right:20%;
+    display: inline-block;
+    position: fixed;
+    z-index: map-get($map: $z-index, $key: "low");
+
+  }
 
   //  background-image: url("/assets/Brightest.png");
   //  background-repeat: no-repeat;
@@ -27,15 +39,17 @@
   a {
     padding-left: 1.5%;
     padding-right:1.5%;
-    padding-top: 25px;
+    padding-top: 36px;
     margin: 0px;
     text-decoration: none;
     color: $ng-nav-font-normal;
     -webkit-tap-highlight-color:transparent;
   }
   a:hover {
-    color: $ng-nav-font-hover;
+    //color: $ng-nav-font-hover;
+    font-size: 18px;
   }
+
 }
 // navigation drop down for small screens
 @mixin nav-dropdown {
@@ -71,7 +85,7 @@
 //from 767 to bigger screens
 @media screen and (min-width: 767px) {
   .nav-cmp {
-    @include nav-cmp(60px);
+    @include nav-cmp(75px);
     @include nav-link();
   }
   .nav-links-icon{

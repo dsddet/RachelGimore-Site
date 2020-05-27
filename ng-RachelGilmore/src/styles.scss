@@ -2,8 +2,9 @@
 @import "./assets/variables";
 html,body{
   margin: 0px;
+  padding:0px;
   display: block;
-  background-color: #f5f5f7;
+  background-color: $ng-secondary-color;
   font-family: $ng-font-family;
   font-size: 12px;
   color: $ng-nav-font-normal;
