@@ -37,18 +37,17 @@
 //links on navigation bar
 @mixin  nav-link() {
   a {
-    padding-left: 1.5%;
-    padding-right:1.5%;
+    padding-left: 0px;
+    padding-right:0px;
     padding-top: 36px;
-    margin: 0px;
+    padding-bottom: 5px;
+    margin: 0px 15px 0px 15px;
     text-decoration: none;
     color: $ng-nav-font-normal;
     -webkit-tap-highlight-color:transparent;
+    @include dynamic-underline(#F9A825, #F9A825);
   }
-  a:hover {
-    //color: $ng-nav-font-hover;
-    font-size: 18px;
-  }
+
 
 }
 // navigation drop down for small screens

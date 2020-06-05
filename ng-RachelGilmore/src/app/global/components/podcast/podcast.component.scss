@@ -1,0 +1,78 @@
+@use 'sass:map';
+@import '../../../../assets/variables';
+
+$pd-bg-color:$pd-bg-color;
+$pd-el-color:white;
+
+
+.podcast-container {
+  background-color: #eaeaea;
+  width: auto;
+  padding: 0px auto 100px auto;
+  margin: 0px auto auto;
+  margin-right: 170px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: auto;
+  display: inline-block;
+  box-shadow: 0 9px 20px 0 #1a4756, 0 6px 20px 0 black;
+
+}
+
+.podcast-row {
+  width: 99%;
+  height: 120px;
+  background-color: $pd-el-color;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  //border: 1px solid lightgray ;
+  text-align: left;
+  overflow: hidden;
+  line-height: 15px;
+
+  p{
+    font-size: 11px;
+    margin-top: 4px;
+    max-width: 282px;
+  }
+}
+
+@mixin podcast-row-content($width,$bg-color){
+  width:auto;
+  //background-color:$bg-color;
+  display:inline-block;
+}
+
+.pd-row-content{
+  padding: 10px;
+  padding-top: 14px;
+  @include podcast-row-content(15%, black);
+  font-size: 10px;
+  color: #858282;
+  //border: 1px solid blue;
+  text-align: left;
+}
+
+.pd-row-content-title{
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.image-container{
+  @include image-container(inline-block);
+  margin: 10px 5px 0px 5px;
+  line-height: 12px;
+}
+
+
+.podcast-controls {
+  margin: 1px auto 2px auto;
+  width: 60%;
+  height: 30px;
+  //background-color: $pd-el-color;
+  display: inline-block;
+}
+

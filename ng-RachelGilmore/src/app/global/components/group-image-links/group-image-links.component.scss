@@ -8,18 +8,7 @@
 }
 
 .image-container{
-  display:inline-block;
-  margin:5px 20px 5px 20px;
-  color:#64767d;
-  text-align: center;
-  img{
-    width:24px;
-    height: 24px;
-  }
-
-  &:hover{
-    color:#e64a5e;
-  }
+  @include image-container(inline-block);
 }
 
 
