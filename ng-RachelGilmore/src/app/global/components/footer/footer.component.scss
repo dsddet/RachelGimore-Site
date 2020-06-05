@@ -27,7 +27,7 @@ footer {
 
 .first-in-ft{
   width: 100%;
-  background-color: $ng-secondary-color;
+  background-color: black;
   display: inline-block;
    @include container-big();
   span{
@@ -35,7 +35,7 @@ footer {
     padding-left:10px;
     font-family: $ng-font-family;
     font-size: 13px;
-    //color: $ng-footer-font-color;
+    color: #9a9a9a;
     line-height: 18px;
     }
 
@@ -63,9 +63,10 @@ footer {
 .second-in-ft{
   height: 40px;
   width: 100%;
-  background-color: $ng-secondary-color;
+  background-color: black;
   display: inline-block;
-  text-align: left;
+  text-align: center;
+  color: #9a9a9a;
 }
 
 .copyright{

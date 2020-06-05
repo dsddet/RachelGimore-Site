@@ -1,0 +1,60 @@
+<div class="podcast-container">
+  <div class="podcast-row" *ngFor="let podcast of podcasts; even as even" [ngStyle]="{'background-color':even?'inherit':'white'}" >
+
+    <div class="pd-row-content" >
+      <img src="/assets/podcast.jpg" width="150px" height="90px" />
+    </div>
+    <div class="pd-row-content">
+      <span class="pd-row-content-title"> {{podcast.dateCreated}}</span>
+      <p>{{podcast.podcastId}}</p>
+    </div>
+    <div class="pd-row-content">
+      <span class="pd-row-content-title"> {{podcast.guestName | uppercase}}</span>
+      <p>
+        {{podcast.podcastId}}. {{podcast.guestAbout}} ..
+      </p>
+    </div>
+    <div class="pd-row-content">
+      <span class="pd-row-content-title"> RELATED LINKS</span>
+      <p>
+        <span *ngIf="podcast.social.insta" >{{podcast.social.insta}}<br /> </span>
+        <span *ngIf="podcast.social.fb" >{{podcast.social.fb}}<br /> </span>
+        <span *ngIf="podcast.social.web" >{{podcast.social.web}}<br /> </span>
+        Download this Episode<br />
+      </p>
+    </div>
+    <div class="pd-row-content">
+      <div class="parent-container">
+        <span class="image-container">
+          <img src="/assets/play_circle_outline-24px.svg" /> <br />
+          play
+        </span>
+
+        <span class="image-container">
+          <img src="/assets/pause_circle_outline-24px.svg" /><br />
+          pause
+        </span>
+
+        <span class="image-container">
+          <img src="/assets/stop-24px.svg" /> <br />
+          stop
+        </span>
+
+        <span class="image-container">
+          <img src="/assets/skip_previous-24px.svg" /> <br />
+          prev
+        </span>
+
+        <span class="image-container">
+          <img src="/assets/skip_next-24px.svg" /> <br />
+          next
+        </span>
+
+      </div>
+    </div>
+  </div>
+  <div class="podcast-controls">
+    <p style="color: black;"> 1 2 3 .. 151</p>
+  </div>
+</div>
+
