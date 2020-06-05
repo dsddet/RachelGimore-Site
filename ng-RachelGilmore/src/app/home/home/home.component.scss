@@ -1,6 +1,6 @@
 @use 'sass:map';
 @import "../../../assets/variables";
-$section-size:450px;
+$section-size:360px;
 
 @mixin section($bg-color, $height) {
   display: flex;
@@ -42,9 +42,9 @@ $section-size:450px;
     @include section-title(#e64a5e);
   }
   img {
-    margin: 80px 50px 0px 60px;
-    width: 360px;
-    height: 360px;
+    margin: 60px 50px 0px 60px;
+    width: 333px;
+    height: 333px;
   }
 }
 
@@ -56,14 +56,14 @@ $section-size:450px;
     @include section-title(#167594);
   }
   img {
-    margin: 80px 50px 0px 50px;
-    width: 360px;
-    height: 360px;
+    margin: 10px 170px 0px 150px;
+    width: 350px;
+    height: 350px;
   }
 }
 
 .sect-3 {
-  @include section(#f9fff7, $section-size);
+  @include section(#f9fff7, $section-size+90px);
   @include horizontal_line(#02889f);
   h1 {
     display: inline;
@@ -79,7 +79,7 @@ $section-size:450px;
 
 @mixin section-txt-container() {
   display: inline-block;
-  margin: 65px 90px 0px 90px;
+  margin: 84px 90px 0px 0px;
   text-align: center;
 }
 
@@ -195,8 +195,8 @@ $pd-el-color:white;
 
 
 .sect-5 {
-  @include section(#f5f5f5, 400px);
-  height: 250px;
+  @include section(#204d68, 400px);
+  height: 290px;
   display: block;
   text-align: center;
 
