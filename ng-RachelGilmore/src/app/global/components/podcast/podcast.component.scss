@@ -10,18 +10,18 @@ $pd-el-color:white;
   width: auto;
   padding: 0px auto 100px auto;
   margin: 0px auto auto;
-  margin-right: 170px;
+  //margin-right: 170px;
   border-radius: 5px;
   text-align: center;
   overflow: auto;
   display: inline-block;
-  box-shadow: 0 9px 20px 0 #1a4756, 0 6px 20px 0 black;
+  // box-shadow: 0 9px 20px 0 #1a4756, 0 6px 20px 0 black;
 
 }
 
 .podcast-row {
   width: 99%;
-  height: 120px;
+  height: 100px;
   background-color: $pd-el-color;
   display: flex;
   flex-direction: row;
