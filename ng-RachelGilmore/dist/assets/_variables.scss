@@ -1,0 +1,81 @@
+$ng-primary-color: #0e84a7;
+$ng-secondary-color: #0388a0;
+$ng-podcast-color: black; //#F5F5F5;
+$ng-secondary-accent-color: #e1eef2;
+$ng-nav-font: 14px;
+$ng-footer-font-color: rgba(77, 78, 80, 0.658);
+$ng-font-family: Arial, Helvetica, sans-serif;
+$ng-nav-font-hover: #fba707;
+$ng-nav-font-normal: #e8e8e8;
+$z-index: (
+  "low": 1000,
+  "mid": 2000,
+  "up": 3000,
+  "top": 4000,
+);
+$pd-bg-color:#f5f5f5; //#83c2f0;
+
+@mixin dynamic-underline($c1, $c2) {
+  text-decoration: none;
+  background-image: linear-gradient($c1, $c2);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+
+  &:hover,
+  &:focus {
+    background-size: 100% 2px;
+  }
+}
+
+@mixin container-big {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+@mixin sizeable-div($width, $display) {
+  width: $width;
+  display: $display;
+}
+
+@mixin footer-headings {
+  font-size: 14px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+@mixin footer-button {
+  padding: 8px 16px;
+  user-select: none;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin: 5px 0px 5px 0px;
+  background-color: wheat;
+  font-size: 13px;
+}
+
+@mixin image-container($display) {
+  display: $display;
+  margin: 5px 20px 5px 20px;
+  color: #64767d;
+  text-align: center;
+  img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+  }
+  &:hover {
+    color: #e64a5e;
+
+    img {
+      opacity: 1;
+    }
+  }
+}
