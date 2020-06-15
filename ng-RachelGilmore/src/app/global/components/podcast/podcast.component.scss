@@ -6,7 +6,7 @@ $pd-el-color:white;
 
 
 .podcast-container {
-  background-color: #eaeaea;
+  background-color: #f8f8f8;
   width: auto;
   padding: 0px auto 100px auto;
   margin: 0px auto auto;
@@ -15,7 +15,7 @@ $pd-el-color:white;
   text-align: center;
   overflow: auto;
   display: inline-block;
-  // box-shadow: 0 9px 20px 0 #1a4756, 0 6px 20px 0 black;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 
 }
 
