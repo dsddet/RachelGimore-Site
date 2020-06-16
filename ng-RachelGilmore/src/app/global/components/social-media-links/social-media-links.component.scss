@@ -1,27 +1,43 @@
 @use 'sass:map';
 @import "../../../../assets/variables";
 
-.media-links-container{
-  width:auto;
-  height: auto;
+@mixin media-links-container($pos){
+  width:130px;
+  height: 35px;
   position: fixed;
-  top: 150px;
-  right:10px;
+  top: 45px;
+  left:$pos;
   z-index: map-get($map: $z-index, $key: "low");
+  margin:30px 4px 0px 4px;
+  background-color: #37478b;
+  text-align: center;
 
   img{
-    display:block;
-    width:26px;
-    height: 26px;
-    padding:5px;
-
+   // display:block;
+    width:19px;
+    height: 19px;
+    margin:5px;
+    opacity: $link-opacity-normal - 0.1;
+    //padding-top: 36px;
     &:hover{
-      width:24px;
-      height: 24px;
+      opacity: $link-opacity-hover;
     }
   }
+}
 
+//for small screens to 767
+@media screen and (max-width: 768px) {
+  .media-links-container{
+    @include media-links-container(40%);
 
+  }
+}
+
+//for larger screens above 768
+@media screen and (min-width: 769px) {
+  .media-links-container{
+    @include media-links-container(8%);
+  }
 }
 
 
