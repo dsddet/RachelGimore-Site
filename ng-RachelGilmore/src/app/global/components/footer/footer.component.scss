@@ -6,6 +6,7 @@ footer {
   bottom: 0px;
   left: 0%;
   z-index: map-get($map: $z-index, $key: "low");
+  overflow: hidden;
 
 }
 .links-div{

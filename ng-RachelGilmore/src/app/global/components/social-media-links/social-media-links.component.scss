@@ -2,15 +2,15 @@
 @import "../../../../assets/variables";
 
 @mixin media-links-container($pos){
-  width:130px;
-  height: 35px;
-  position: fixed;
-  top: 45px;
+  display: inline-block;
   left:$pos;
   z-index: map-get($map: $z-index, $key: "low");
-  margin:30px 4px 0px 4px;
-  background-color: #37478b;
+
+  float:right;
+  //background-color: #37478b;
   text-align: center;
+  margin-top: 22px;
+  margin-right: 25px;
 
   img{
    // display:block;

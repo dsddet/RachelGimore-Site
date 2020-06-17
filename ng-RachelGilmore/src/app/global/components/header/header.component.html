@@ -1,17 +1,18 @@
 <nav class="nav-cmp">
-  <div class="nav-links-icon" (click)="toggleNavigation()">
-    <hr />
-    <hr />
-    <hr />
-  </div>
-  <div *ngIf="showElement" class="nav-dropdown">
+  <span class="nav-links-icon" (click)="toggleNavigation()">
+    <img src="/assets/menu-24px.svg" width="44px" height="44px" />
+  </span>
+  <span *ngIf="showElement" class="nav-dropdown">
     <a href="#" *ngFor="let link of links"> {{ link }}</a>
-  </div>
+  </span>
 
-  <div *ngIf="!showElement">
-  <a class="nav-hide" href="#" *ngFor="let link of links"> {{ link }}</a>
-  </div>
+  <span *ngIf="!showElement">
+    <a class="nav-hide" href="#" *ngFor="let link of links"> {{ link }}</a>
+  </span>
+<span class="logo-img">
+  <img src="/assets/main_logo3.svg" width="60px" height="60px" />
+</span>
 
-  <img src="/assets/main_logo3.svg" >
+<app-social-media-links></app-social-media-links>
 
 </nav>
