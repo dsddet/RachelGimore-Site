@@ -1,18 +1,30 @@
 @use 'sass:map';
 @import "../../../assets/variables";
-$section-size:auto;
+$section-size: auto;
 
 @mixin section($bg-color, $height) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   background-color: $bg-color;
   height: $height;
   width: auto;
   overflow: hidden;
-  margin-top: 100px;
+  padding: 15px 0px 15px 0px;
+}
+
+@mixin section-msg($width, $font-color) {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $font-color;
+  width: $width;
+  padding: 0px 10px 0px 10px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 20px;
 }
 
 @mixin horizontal_line($color) {
@@ -31,7 +43,14 @@ $section-size:auto;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   color: $color;
-//@include dynamic-underline($color,$color);
+  //@include dynamic-underline($color,$color);
+}
+
+@mixin section-txt-container($align-self) {
+  display: inline-block;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  align-self: $align-self;
 }
 
 .sect-1 {
@@ -41,81 +60,130 @@ $section-size:auto;
 
   h1 {
     display: inline;
-    @include section-title(#C1FFF5);
-  }
-  img {
-    //margin: 60px 50px 0px 60px;
-    width: 333px;
-    height: 333px;
+    @include section-title(#c1fff5);
   }
 
-  .section-msg {
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #C1FFF5;
-    opacity: 0.7;
-    width: 400px;
-    margin: auto;
-    text-align: center;
-    margin-top: 10px;
-    line-height: 20px;
+  .section-txt-container {
+    @include section-txt-container(end);
+  }
+
+  @media screen and (max-width: 769px) {
+    .section-msg {
+      @include section-msg(auto, #c2fff5bf);
+    }
+    .section-img {
+      img {
+        width: 285px;
+        height: 285px;
+        opacity: 0.9;
+      }}
+  }
+
+  @media screen and (min-width: 770px) {
+    .section-msg {
+      @include section-msg(400px, #c2fff5bf);
+    }
+    .section-img{
+      img{
+        opacity: 0.9;
+      width: 333px;
+      height: 333px;
+      margin-left:200px;
+      margin-right: 200px;
+    }
+    }
   }
 }
 
 .sect-2 {
   @include section(#c9efd7, $section-size);
+  flex-wrap: wrap-reverse;
   @include horizontal_line(#02889f);
   h1 {
     display: inline;
     @include section-title(#167594);
   }
-  img {
-    // margin: 10px 170px 0px 150px;
-    width: 350px;
-    height: 350px;
+
+  .section-txt-container {
+    @include section-txt-container(center);
+  }
+
+  @media screen and (max-width: 769px) {
+    .section-msg {
+      @include section-msg(auto, #167594);
+    }
+    .section-img {
+      img {
+        opacity: 0.9;
+        width: 350px;
+        height: 285px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 770px) {
+    .section-msg {
+      @include section-msg(400px, #167594);
+    }
+    .section-img {
+      img {
+        opacity: 0.9;
+        width: 400px;
+        height: 333px;
+        margin-left: 200px;
+        margin-right: 200px;
+      }
+    }
   }
 }
 
 .sect-3 {
-  @include section(#c8d1ef, $section-size+90px);
+  @include section(#c8d1ef, $section-size + 90px);
   @include horizontal_line(#02889f);
   h1 {
     display: inline;
     @include section-title(#556ca4);
   }
-  img {
-    // margin: 0px 50px 0px 50px;
-    width: auto;
-    height: 200px;
-    margin-left: 120px;
+
+  .section-txt-container-cst3 {
+    @include section-txt-container(end);
   }
+
+  @media screen and (max-width: 769px) {
+    .section-msg {
+      @include section-msg(auto, #167594);
+    }
+    .section-img {
+      img {
+        opacity: 0.9;
+        width: 350px;
+        height: 111px;
+        margin-left:50px;
+        margin-top:15px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 770px) {
+    .section-msg {
+      @include section-msg(400px, #167594);
+    }
+    .section-img {
+      img {
+        opacity: 0.9;
+        width: auto;
+        height: 205px;
+        margin-left: 100px;
+      }
+    }
+  }
+
 }
 
-@mixin section-txt-container() {
-  display: inline-block;
-  // margin: 84px 90px 0px 0px;
-  text-align: center;
-}
 
-.section-txt-container-cst3 {
-  @include section-txt-container();
-  margin-top: 40px;
-}
 
-.section-txt-container {
-  @include section-txt-container();
-}
 
-.section-msg {
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1483a7;
-  width: 400px;
-  margin: auto;
-  text-align: center;
-  margin-top: 10px;
-  line-height: 20px;
-}
+
 
 .abt-float {
   width: 170px;
@@ -154,8 +222,8 @@ $section-size:auto;
 
 //Podcast variables
 
-$pd-bg-color:black;
-$pd-el-color:white;
+$pd-bg-color: black;
+$pd-el-color: white;
 
 .sect-4 {
   // background-color:$pd-bg-color;
@@ -165,11 +233,11 @@ $pd-el-color:white;
   display: block;
 
   background-image: url("https://unsplash.com/photos/rBcXE0ToVN0");
-   background-repeat: no-repeat;
-   background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   //  background-position-x: 10%;
   //  background-position-y: center;
-   //background-blend-mode: normal;
+  //background-blend-mode: normal;
 
   h1 {
     margin: auto;
@@ -182,17 +250,20 @@ $pd-el-color:white;
     //font-weight: normal;
     width: 100%;
     //text-shadow: 0 0 2px white, 0 0 2px white;
+  }
 
+  .section-txt-container {
+    @include section-txt-container(end);
   }
 }
 
-.pd-headings-container{
+.pd-headings-container {
   max-width: 480px;
   text-align: center;
   display: inline-block;
   margin: 0px auto auto 160px;
 
-  p{
+  p {
     //max-width: 300px;
     //display: inline-block;
     line-height: 20px;
@@ -201,29 +272,32 @@ $pd-el-color:white;
     width: 100%;
   }
 
-  img{
+  img {
     height: 250px;
-    width:250px;
-    margin:20px;
+    width: 250px;
+    margin: 20px;
     filter: drop-shadow(5px 5px 5px #222);
-
   }
 }
-
-
 
 .sect-5 {
   @include section(#204d68, 400px);
   height: 290px;
   display: block;
   text-align: center;
-    background-image: url("/assets/pdbkgd.jpg");
-   background-repeat: no-repeat;
-   background-size:cover;
+  background-image: url("/assets/pdbkgd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h1 {
     padding: 50px 0px 30px 0px;
     @include section-title(#5d6769);
     display: inline-block;
   }
+
+  .section-txt-container {
+    @include section-txt-container(end);
+  }
 }
+
+//Responsive

@@ -3,6 +3,8 @@
 
 $nav-bar-height:75px;
 
+
+
 @mixin nav-cmp($height,$font-size,$pos) {
   display: block;
   position: fixed;
@@ -58,7 +60,7 @@ $nav-bar-height:75px;
 //links on small displays container
 @mixin nav-links-icon($display){
 
-    float: left;
+    float: right;
     padding: 15px 10px 0px 20px;
     display: $display;
    // text-align: center;
@@ -74,7 +76,7 @@ $nav-bar-height:75px;
 }
 
 //from 767 to bigger screens
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 770px) {
   .nav-cmp {
     @include nav-cmp($nav-bar-height,16px,2%);
     @include nav-link();
@@ -89,8 +91,8 @@ $nav-bar-height:75px;
 
   .logo-img{
     display: block;
-    padding-top: 10px;
-    padding-left: 25px;
+    padding-top: 5px;
+    padding-left: auto;
     float: left;
     overflow: hidden;
 
@@ -98,7 +100,7 @@ $nav-bar-height:75px;
 }
 
 //for small screens to 767
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .nav-cmp {
     @include nav-cmp($nav-bar-height,14px,40%);
   }
@@ -120,14 +122,20 @@ $nav-bar-height:75px;
   }
 
   .logo-img{
-    display: block;
+    display: none;
     padding-top: 10px;
-    padding-left: (768px / 2) - 72px - 34px;
+
     float: left;
     overflow: hidden;
 
   }
+
+  app-social-media-links{
+    display: none;
+  }
 }
 
-
-
+.large-nav-links{
+  float:right;
+  padding-right: 1%;
+}

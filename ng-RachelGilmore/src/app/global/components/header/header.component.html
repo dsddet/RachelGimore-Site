@@ -6,13 +6,12 @@
     <a href="#" *ngFor="let link of links"> {{ link }}</a>
   </span>
 
-  <span *ngIf="!showElement">
+  <span *ngIf="!showElement" class="large-nav-links">
     <a class="nav-hide" href="#" *ngFor="let link of links"> {{ link }}</a>
   </span>
-<span class="logo-img">
-  <img src="/assets/main_logo3.svg" width="60px" height="60px" />
-</span>
+  <span class="logo-img">
+    <img src="/assets/main_logo3.svg" width="70px" height="70px" />
+  </span>
 
-<app-social-media-links></app-social-media-links>
-
+  <!-- <app-social-media-links></app-social-media-links> -->
 </nav>

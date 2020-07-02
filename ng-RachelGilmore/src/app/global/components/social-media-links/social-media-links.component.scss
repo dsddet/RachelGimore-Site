@@ -6,10 +6,10 @@
   left:$pos;
   z-index: map-get($map: $z-index, $key: "low");
 
-  float:right;
+  //float:right;
   //background-color: #37478b;
   text-align: center;
-  margin-top: 22px;
+  margin-top: 30px;
   margin-right: 25px;
 
   img{
