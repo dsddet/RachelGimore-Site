@@ -11,7 +11,6 @@
       </p>
 
       <app-group-image-links></app-group-image-links>
-
     </div>
     <div class="section-img">
       <img src="/assets/ee_img.svg" alt="" />
@@ -89,19 +88,33 @@
 </div> -->
 
 <div class="sect-4">
+  <div class="mini-sect">
+    <img src="/assets/Dare.svg" alt=""/>
+    <img src="/assets/adventurer.svg" alt="" />
+    <p>
+      Subscribe to the weekly podcast to discover experiences through other
+      travelers
+    </p>
+  </div>
+
+  <div class="mini-sect-pd">
+    <h1>Podcast</h1>
+    <app-podcast [podcasts]="homePodcasts"></app-podcast>
+  </div>
+
   <!-- <div class="pd-headings-container">
     <img src="/assets/pd-img-title.png" alt="" />
 
   </div> -->
-  <h1>
+  <!-- <h1>
     Dare to Adventure podcast
-  </h1>
+  </h1> -->
   <!-- <h1>
     Discover how this could change your life, the power of travel through
     other's experiences
   </h1> -->
 
-  <app-podcast [podcasts]="homePodcasts"></app-podcast>
+  <!-- <app-podcast [podcasts]="homePodcasts"></app-podcast> -->
 </div>
 
 <!-- <div>
