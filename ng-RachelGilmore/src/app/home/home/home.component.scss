@@ -304,22 +304,31 @@ $pd-el-color: white;
 }
 
 .sect-5 {
-  @include section(#204d68, 400px);
-  height: 290px;
-  display: block;
+  @include section(#013483, auto);
   text-align: center;
-  background-image: url("/assets/pdbkgd.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("/assets/pdbkgd.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
 
   h1 {
-    padding: 50px 0px 30px 0px;
-    @include section-title(#5d6769);
+    @include section-title(#bcc9d8);
     display: inline-block;
+    width: 100%;
+    padding:0px;
+    margin:40px 0px 10px 0px;
   }
 
   .section-txt-container {
     @include section-txt-container(end);
+  }
+
+  p{
+    width: 40%;
+    font-size: 14px;
+    color:#8CA4BF;
+    display: inline-block;
+    line-height: 25px;
+    text-align: left;
   }
 }
 
