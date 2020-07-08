@@ -33,12 +33,10 @@ $nav-bar-height:75px;
     text-decoration: none;
     color: white;
     -webkit-tap-highlight-color:transparent;
-    opacity: $link-opacity-normal;
-    //@include dynamic-underline(#d1ccc2, #d1ccc2);
+    //opacity: $link-opacity-normal;
+    @include dynamic-underline(#d65365, #d65365);
 
-    &:hover{
-      opacity: $link-opacity-hover;
-    }
+
   }
 
 

@@ -1,4 +1,4 @@
-<nav class="nav-cmp">
+<nav class="nav-cmp" [ngStyle]="stateStyles" >
   <span class="nav-links-icon" (click)="toggleNavigation()">
     <img src="/assets/menu-24px.svg" width="44px" height="44px" />
   </span>
@@ -7,7 +7,7 @@
   </span>
 
   <span *ngIf="!showElement" class="large-nav-links">
-    <a class="nav-hide" href="#" *ngFor="let link of links"> {{ link }}</a>
+    <a [ngStyle]="linkStyles" class="nav-hide" href="#" *ngFor="let link of links"> {{ link }}</a>
   </span>
   <span class="logo-img">
     <img src="/assets/main_logo3.svg" width="70px" height="70px" />
