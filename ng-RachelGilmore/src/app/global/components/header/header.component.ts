@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) spit(event) {
     let pos = event.target.scrollingElement.scrollTop;
 
+    if(window.innerWidth>=770)
+    {
+
     if(pos<365){
       this.stateStyles=null;
       this.linkStyles=null;
@@ -49,6 +52,7 @@ export class HeaderComponent implements OnInit {
         this.linkStyles={'color':'#bcc9d8'};
         this.state='blue';
       }
+    }
 
     }
   }
