@@ -56,7 +56,7 @@ $section-size: auto;
 .sect-1 {
   @include section($ng-secondary-color, $section-size);
   @include horizontal_line(#02889f);
-  margin-top: 74px;
+
 
   h1 {
     display: inline;
