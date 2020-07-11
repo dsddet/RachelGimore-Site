@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home/home.component';
 import { GroupImageLinksComponent } from './global/components/group-image-links/group-image-links.component';
 import { SocialMediaLinksComponent } from './global/components/social-media-links/social-media-links.component';
 import { PodcastComponent } from './global/components/podcast/podcast.component';
+import { GalleryComponent } from './global/components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PodcastComponent } from './global/components/podcast/podcast.component'
     HomeComponent,
     GroupImageLinksComponent,
     SocialMediaLinksComponent,
-    PodcastComponent
+    PodcastComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule
