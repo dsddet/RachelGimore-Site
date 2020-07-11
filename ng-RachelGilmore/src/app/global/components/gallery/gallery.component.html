@@ -1,0 +1,26 @@
+
+<div class="gallery-container">
+  <!-- <h1>Camping</h1> -->
+<!-- video pane -->
+  <div class="thumb-container">
+    <div class="image-thumb" *ngFor="let i of leftThumbImages10" (click)="changeImage(i)">
+      <img src="{{'/assets/gallery/'+i+'.png'}}" />
+    </div>
+  </div>
+<!-- current pane -->
+  <div class="image-item">
+    <img src={{activeImage}} style="border-radius: 16px;"/>
+    <div class="middle-thumb-container">
+      <div class="image-thumb" *ngFor="let i of middleTHumbImages5" (click)="changeImage(i)">
+        <img src="{{'/assets/gallery/'+i+'.png'}}" />
+      </div>
+    </div>
+  </div>
+<!-- image pane -->
+  <div class="thumb-container">
+    <div class="image-thumb" *ngFor="let i of rightThumbImages10" (click)="changeImage(i)">
+      <img src="{{'/assets/gallery/'+i+'.png'}}"  />
+    </div>
+  </div>
+
+</div>
