@@ -9,6 +9,7 @@ import { GroupImageLinksComponent } from './global/components/group-image-links/
 import { SocialMediaLinksComponent } from './global/components/social-media-links/social-media-links.component';
 import { PodcastComponent } from './global/components/podcast/podcast.component';
 import { GalleryComponent } from './global/components/gallery/gallery.component';
+import { EarthandsoulComponent } from './earthandsoul/earthandsoul.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GalleryComponent } from './global/components/gallery/gallery.component'
     GroupImageLinksComponent,
     SocialMediaLinksComponent,
     PodcastComponent,
-    GalleryComponent
+    GalleryComponent,
+    EarthandsoulComponent
   ],
   imports: [
     BrowserModule

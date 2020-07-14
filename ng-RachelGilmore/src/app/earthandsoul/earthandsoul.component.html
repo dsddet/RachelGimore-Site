@@ -1,0 +1,39 @@
+<div class="es-comp-box">
+  <h1 class="box-title">
+    Ellevating performance through emmersive travel experiences
+  </h1>
+  <div class="es-comp-features" *ngFor="let feature of featuresData">
+    <img src="{{ feature.imageUrl }}" />
+    <h2 class="es-comp-features-title">{{ feature.title }}</h2>
+
+    <p class="es-comp-features-desc">{{ feature.description }}</p>
+  </div>
+</div>
+
+<div class="es-comp-packages">
+  <h2 class="packages-title">Choose from a wide range of options</h2>
+  <div class="package-listings">
+    <span
+      *ngFor="let item of packagesData; index as i"
+      (click)="showPackagePoints(i)"
+      [ngClass]="{ selected: currentlySelected == i }"
+      >{{ item.package }}
+      <img
+        src="https://res.cloudinary.com/springboard-images/image/upload/c_limit,dpr_1.0,f_auto,fl_lossy,q_auto,w_20/v1/homepage-assets/icons/arrow-green.png"
+      />
+      <div class="package-pricing">{{ "$" + item.price }}</div></span
+    >
+  </div>
+
+  <div class="package-desc-card">
+    <div *ngFor="let item of activePackage" class="chapter-bullet">
+      <img
+        src="https://res.cloudinary.com/springboard-images/image/upload/c_limit,dpr_1.0,f_auto,fl_lossy,q_auto,w_15/v1/homepage-assets/icons/checkmark-grey.png"
+      />
+      <span class="bullet-text"> {{ item }}</span>
+    </div>
+  </div>
+
+
+  <a class="subscribe" href="https://calendly.com/earthandsoul/30-min?" target="_blank">Schedule a call today</a>
+
